@@ -20,6 +20,7 @@
   <meta name="author" content="Bucky Maler">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main2.css">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10962901552">
 </script>
@@ -158,7 +159,7 @@
                 <h2>Nous<br>voulons<br>offrir<br>la donnée à tous</h2>
                 <p>Nous sommes un regroupement de travailleurs autonomes engagés dans la démocratisation des données et l'innovation numérique. Notre mission est de rendre les technologies accessibles et performantes pour tous les types d'entreprises.</p>
                   <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <svg  class="test" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                     <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                       <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
                     </g>
@@ -201,51 +202,33 @@
           </li>
           <li class="l-section section">
             <div class="hire">
-              <!-- checkout formspree.io for easy form setup -->
-
-                <div id="zf_div_brzHd9XCqYKtQA5O-N_hSaB3RlD0xOIyDpKT5Q_lZ30"></div><script type="text/javascript">(function() {
-                  try{
-                  var f = document.createElement("iframe");
-                  f.src = 'https://forms.zohopublic.eu/contactanalyzea1/form/BastienandCo/formperma/brzHd9XCqYKtQA5O-N_hSaB3RlD0xOIyDpKT5Q_lZ30?zf_rszfm=1';
-                  f.style.border="none";
-                  f.style.height="864px";
-                  f.style.width="90%";
-                  f.style.transition="all 0.5s ease";
-                  f.setAttribute("aria-label", 'Bastien\x20and\x20Co.');
-                  
-                  var d = document.getElementById("zf_div_brzHd9XCqYKtQA5O-N_hSaB3RlD0xOIyDpKT5Q_lZ30");
-                  d.appendChild(f);
-                  window.addEventListener('message', function (){
-                  var evntData = event.data;
-                  if( evntData && evntData.constructor == String ){
-                  var zf_ifrm_data = evntData.split("|");
-                  if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
-                  var zf_perma = zf_ifrm_data[0];
-                  var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                  var iframe = document.getElementById("zf_div_brzHd9XCqYKtQA5O-N_hSaB3RlD0xOIyDpKT5Q_lZ30").getElementsByTagName("iframe")[0];
-                  if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
-                  var prevIframeHeight = iframe.style.height;
-                  var zf_tout = false;
-                  if( zf_ifrm_data.length == 3 ) {
-                  iframe.scrollIntoView();
-                  zf_tout = true;
-                  }
-                  if ( prevIframeHeight != zf_ifrm_ht_nw ) {
-                  if( zf_tout ) {
-                  setTimeout(function(){
-                  iframe.style.height = zf_ifrm_ht_nw;
-                  },500);
-                  } else {
-                  iframe.style.height = zf_ifrm_ht_nw;
-                  }
-                  }
-                  }
-                  }
-                  }
-                  }, false);
-                  }catch(e){}
-                  })();</script>
-
+              <h2>Formulaire</h2>
+              <div class="form-container">
+                <form action="https://forms.zohopublic.eu/contactanalyzea1/form/BastienandCo/formperma/qh8ExcvADjwMwLwmeOfl1hD87lNCINsvhell0VssR5I/htmlRecords/submit" 
+                      name="form" id="form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                    
+                    <input type="hidden" name="zf_referrer_name" value="">
+                    <input type="hidden" name="zf_redirect_url" value="">
+                    <input type="hidden" name="zc_gad" value="">
+                    
+                    <label>Nom <em>*</em></label>
+                    <input type="text" name="Name_First" maxlength="255" placeholder="Votre nom" required />
+                    
+                    <label>Prénom</label>
+                    <input type="text" name="Name_Last" maxlength="255" placeholder="Votre prénom" />
+                    
+                    <label>E-mail</label>
+                    <input type="email" name="Email" maxlength="255" placeholder="Votre email" required />
+                    
+                    <label>Téléphone</label>
+                    <input type="text" name="PhoneNumber_countrycode" maxlength="20" placeholder="Votre numéro de téléphone" />
+                    
+                    <label>Description de votre besoin</label>
+                    <textarea name="MultiLine" maxlength="65535" placeholder="Décrivez votre besoin" rows="4"></textarea>
+                    
+                    <button type="submit">Soumettre</button>
+                </form>
+            </div>
             </div>
           </li>
         </ul>
