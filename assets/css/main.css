@@ -1124,7 +1124,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 900px;
+    width: 100vh;
     max-width: 75%;
     height: 100%;
     -webkit-box-orient: vertical;
@@ -1141,7 +1141,7 @@ body {
 
 @media (max-width: 1180px) {
     .about {
-        max-width: 100%
+        height: 50%;
     }
 }
 
@@ -1322,7 +1322,7 @@ body {
 
 @media (max-width: 600px) {
     .about--banner {
-        height: auto
+        height: 100px
     }
 
     .about--banner::before {
@@ -1362,8 +1362,7 @@ body {
 
     }
     .about--options>a {
-        width: 70%;
-        margin-bottom: 20px
+        display: none;
     }
 }
 
