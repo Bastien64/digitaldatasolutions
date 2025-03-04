@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Fr">
+<html lang="fr">
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS8JYD6P8V"></script>
@@ -272,5 +272,24 @@
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
 <script src="assets/js/script2.js"></script>
+<script>
+  (function() {
+    var userLang = navigator.language || navigator.userLanguage; // Détecte la langue du navigateur
+    var currentPage = window.location.pathname; // Récupère la page actuelle
+
+    // Vérifier si l'utilisateur a déjà été redirigé pour éviter une boucle infinie
+    var redirected = sessionStorage.getItem("redirected");
+
+    if (!redirected) {
+      if (userLang.startsWith("fr") && !currentPage.includes("index.html")) {
+        sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
+        window.location.href = "/";
+      } else if (!userLang.startsWith("fr") && !currentPage.includes("eng.html")) {
+        sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
+        window.location.href = "/eng.html";
+      }
+    }
+  })();
+</script>
 </body>
 </html>
