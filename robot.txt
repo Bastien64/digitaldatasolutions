@@ -1,0 +1,12 @@
+# Bloque tous les robots d'accéder à des dossiers spécifiques
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Autorise tous les robots à explorer le reste du site
+User-agent: *
+Allow: /
+
+# Spécifie l'emplacement du sitemap
+Sitemap: https://digitaldatasolutions.ca/sitemap.xml
