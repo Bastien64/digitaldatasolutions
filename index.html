@@ -284,7 +284,7 @@
       if (userLang.startsWith("fr") && !currentPage.includes("index.html")) {
         sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
         window.location.href = "/";
-      } else if (!userLang.startsWith("fr") && !currentPage.includes("eng.html")) {
+      } else if (!userLang.startsWith("fr") && !currentPage.includes("index.html")) {
         sessionStorage.setItem("redirected", "true"); // Marquer comme redirigé
         window.location.href = "/eng.html";
       }
