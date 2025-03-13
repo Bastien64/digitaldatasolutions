@@ -1,17 +1,19 @@
-name: Update Sitemap
+name: Update Sitemap on Article Change
 
 on:
   push:
+    paths:
+      - "articles.json"  # Déclenchement uniquement si articles.json est modifié
     branches:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Trigger Netlify Build Hook
+      - name: Trigger Netlify Build
         run: curl -X POST -d '{}' "https://api.netlify.com/build_hooks/67d321206dfc67281baa4359"
