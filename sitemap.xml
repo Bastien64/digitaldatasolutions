@@ -6,4 +6,16 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://digitaldatasolutions.ca/articles.html?id=1</loc>
+        <lastmod>2025-03-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://digitaldatasolutions.ca/articles.html?id=2</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
