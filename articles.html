@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Styles généraux */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    body {
+        background-color: #f5f7fa;
+        color: #000000;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    a {
+        text-decoration: none;
+        color: #3498db;
+    }
+    a:hover {
+        color: #2980b9;
+    }
+
+    /* Header */
+    .header {
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .header h2 {
+        margin: 0;
+        font-weight: 500;
+    }
+
+    /* Contenu de l'article */
+    #article-content {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    #article-content h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    #article-content p {
+        color: #555;
+        margin-bottom: 10px;
+    }
+    #article-content em {
+        color: #888;
+        font-size: 14px;
+    }
+    #article-content div {
+        margin-top: 15px;
+        color: #444;
+    }
+
+    /* Bouton retour */
+    .back-link {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        text-align: center;
+    }
+    .back-link:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #2c3e50;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>Digital Data Solution Blog</h2>
+</div>
+
+<div id="article-content">
+    <!-- Contenu de l'article injecté ici -->
+</div>
+
+<a href="blog.html" class="back-link">Retour à l'accueil</a>
+
+<div class="footer">
+    <p>&copy; 2025 Digital Data Solution. Tous droits réservés.</p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const articleId = params.get('id');
+
+fetch('articles.json')
+    .then(response => response.json())
+    .then(data => {
+        const article = data.articles.find(a => a.id === articleId);
+        const articleContent = document.getElementById('article-content');
+        if (article) {
+            articleContent.innerHTML = `
+                <h1>${article.titre}</h1>
+                <p><em>Publié le ${article.date}</em></p>
+<img src="${article.image}" alt="Image de ${article.titre}" style="max-height:200px; width:auto;">
+                <div>${article.contenu}</div>
+            `;
+        } else {
+            articleContent.innerHTML = '<p>Article non trouvé.</p>';
+        }
+    })
+    .catch(error => console.error('Erreur lors du chargement de l\'article:', error));
+</script>
+
+</body>
+
+</html>

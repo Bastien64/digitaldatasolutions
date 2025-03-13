@@ -1,0 +1,20 @@
+{
+    "articles": [
+        {
+            "id": "1",
+            "titre": "Premier article du blog",
+            "resume": "Découvrez notre premier article passionnant.",
+            "date": "2025-03-10",
+            "image": "assets/img/logo.png",
+            "contenu": ""
+        },
+        {
+            "id": "2",
+            "titre": "Deuxième article intéressant",
+            "resume": "Un article qui vous captivera.",
+            "date": "2025-03-08",
+            "image": "images/article2.jpg",
+            "contenu": "<p>Voici le contenu détaillé du deuxième article. Bonne lecture !</p>"
+        }
+    ]
+}
